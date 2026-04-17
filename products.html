@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Produkte - Velora Noir</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: Arial;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: gold;
+    margin: 0 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* HEADER */
+.header {
+    height: 50vh;
+    background: url('https://images.unsplash.com/photo-1597006833902-88d1a0e2f9f2') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    font-size: 60px;
+    color: gold;
+    text-shadow: 0 0 30px red;
+}
+
+/* PRODUCTS */
+.container {
+    padding: 120px 20px 60px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    background: #111;
+    border: 1px solid gold;
+    overflow: hidden;
+    transition: 0.4s;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px red;
+}
+
+/* IMAGE ZOOM */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h2 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.content p {
+    opacity: 0.8;
+}
+
+/* GLOW LINE */
+.card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, red, transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUKTE</a>
+    <a href="about.html">MARKE</a>
+</nav>
+
+<div class="header">
+    <h1>UNSERE LINIEN</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1603052875302-d376b7c0638a">
+    <div class="content">
+        <h2>Velora Gold</h2>
+        <p>Sanft. Edel. Dominant.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1597006833902-88d1a0e2f9f2">
+    <div class="content">
+        <h2>Velora Black</h2>
+        <p>Tief. Stark. Kompromisslos.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a">
+    <div class="content">
+        <h2>Velora Red</h2>
+        <p>Intensiv. Heiß. Gefährlich.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
