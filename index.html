@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>VELORA NOIR</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 20%, black 90%);
+}
+
+/* CONTENT */
+.content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease;
+}
+
+h1 {
+    font-size: 90px;
+    color: gold;
+    text-shadow: 0 0 30px gold, 0 0 60px red;
+    letter-spacing: 5px;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 26px;
+    color: red;
+    letter-spacing: 3px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    border: 2px solid gold;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 40px gold;
+    transform: scale(1.1);
+}
+
+/* SCROLL SECTION */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, black, #111);
+}
+
+.section h2 {
+    color: gold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SMOKE EFFECT (fake with blur circles) */
+.smoke {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: moveSmoke 10s infinite alternate;
+}
+
+.smoke:nth-child(1) { top: 20%; left: 10%; }
+.smoke:nth-child(2) { top: 60%; left: 70%; }
+.smoke:nth-child(3) { top: 40%; left: 40%; }
+
+@keyframes moveSmoke {
+    from { transform: translateY(0) scale(1); }
+    to { transform: translateY(-50px) scale(1.3); }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUKTE</a>
+    <a href="about.html">MARKE</a>
+</nav>
+
+<section class="hero">
+
+    <div class="smoke"></div>
+    <div class="smoke"></div>
+    <div class="smoke"></div>
+
+    <div class="content">
+        <h1>VELORA NOIR</h1>
+        <div class="tagline">DEFINE YOUR DARKNESS</div>
+        <a href="products.html" class="btn">JETZT ENTDECKEN</a>
+    </div>
+
+</section>
+
+<section class="section">
+    <h2>LUXUS TRIFFT REBELLION</h2>
+    <p>
+        Velora Noir ist mehr als eine Marke. Es ist ein Statement.
+        Für diejenigen, die Grenzen ignorieren und ihren eigenen Weg gehen.
+        Jede Linie ist pure Intensität — kompromisslos und dominant.
+    </p>
+</section>
+
+<section class="section">
+    <h2>PURE INTENSITÄT</h2>
+    <p>
+        Entwickelt für maximale Wirkung. Stark im Charakter.
+        Unverkennbar im Stil. Velora Noir steht für die dunkle Seite des Luxus.
+    </p>
+</section>
+
+</body>
+  </html><!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>VELORA NOIR</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 20%, black 90%);
+}
+
+/* CONTENT */
+.content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease;
+}
+
+h1 {
+    font-size: 90px;
+    color: gold;
+    text-shadow: 0 0 30px gold, 0 0 60px red;
+    letter-spacing: 5px;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 26px;
+    color: red;
+    letter-spacing: 3px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    border: 2px solid gold;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 40px gold;
+    transform: scale(1.1);
+}
+
+/* SCROLL SECTION */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, black, #111);
+}
+
+.section h2 {
+    color: gold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SMOKE EFFECT (fake with blur circles) */
+.smoke {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: moveSmoke 10s infinite alternate;
+}
+
+.smoke:nth-child(1) { top: 20%; left: 10%; }
+.smoke:nth-child(2) { top: 60%; left: 70%; }
+.smoke:nth-child(3) { top: 40%; left: 40%; }
+
+@keyframes moveSmoke {
+    from { transform: translateY(0) scale(1); }
+    to { transform: translateY(-50px) scale(1.3); }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUKTE</a>
+    <a href="about.html">MARKE</a>
+</nav>
+
+<section class="hero">
+
+    <div class="smoke"></div>
+    <div class="smoke"></div>
+    <div class="smoke"></div>
+
+    <div class="content">
+        <h1>VELORA NOIR</h1>
+        <div class="tagline">DEFINE YOUR DARKNESS</div>
+        <a href="products.html" class="btn">JETZT ENTDECKEN</a>
+    </div>
+
+</section>
+
+<section class="section">
+    <h2>LUXUS TRIFFT REBELLION</h2>
+    <p>
+        Velora Noir ist mehr als eine Marke. Es ist ein Statement.
+        Für diejenigen, die Grenzen ignorieren und ihren eigenen Weg gehen.
+        Jede Linie ist pure Intensität — kompromisslos und dominant.
+    </p>
+</section>
+
+<section class="section">
+    <h2>PURE INTENSITÄT</h2>
+    <p>
+        Entwickelt für maximale Wirkung. Stark im Charakter.
+        Unverkennbar im Stil. Velora Noir steht für die dunkle Seite des Luxus.
+    </p>
+</section>
+
+</body>
+</html>
